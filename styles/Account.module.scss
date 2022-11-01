@@ -1,0 +1,35 @@
+.account_header{
+    color: $color-white;
+    opacity: .8;
+    height: 8vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    transition: all .3s;
+    
+
+    &_img{
+        margin-right: 2vh;
+        height: 5vh;
+        width: 5vh;
+        border: .5vh solid $color-atom-green;
+        border-radius: 100vh;
+        background: gray;
+    }
+
+    &_name{
+        font-size: 1.5vh;
+        font-weight: 500;
+    }
+
+    &:hover &_img{
+        box-shadow: 0 0 10px $color-atom-green;
+    }
+
+    &:hover &_name{
+        color: $color-atom-green;
+    }
+}

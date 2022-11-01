@@ -1,0 +1,48 @@
+.button{
+    margin: 0 3vh;
+    font-size: 1.5vh;
+    position: relative;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    opacity: .8;
+    transition: opacity .3s cubic-bezier(.51, .92, .24, 1);
+    transition: transform .3s;
+
+    &::after {
+        --scale: 0;
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 110%;
+        height: .2vh;
+        background: $color-atom-green;
+        transform: scaleX(var(--scale));
+        transform-origin: var(--x) 50%;
+        transition: transform .3s cubic-bezier(.51, .92, .24, 1);
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+
+    &:hover::after {
+        --scale: 1;
+    }
+}
+
+.button_big {
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    font-size:3vh;
+    margin: 0;
+    padding: 1vh 2vh;
+    border: 0.3vh solid white;
+
+    &:hover{
+        color: $color-atom-green;
+        border-color: $color-atom-green;
+    }
+}

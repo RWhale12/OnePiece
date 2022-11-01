@@ -1,0 +1,26 @@
+@import './colors.module.scss';
+
+.header {
+    width: 100%;
+    background: $color-one;
+    height: 8vh;
+    box-shadow: 0 0 5vh $color-white;
+    position: reltive;
+    z-index: 5;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &_div_nav {
+        width: 40%;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 5vh;
+        
+    }
+
+    &_div_account{
+        width: 10%;
+    }
+}

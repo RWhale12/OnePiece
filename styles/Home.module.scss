@@ -1,5 +1,36 @@
+@import './Header.module.scss';
+@import './MainImage.module.scss';
+@import './Button.module.scss';
+@import './Account.module.scss';
+@import './Logo.module.scss';
+
 .container {
-  padding: 0 2rem;
+  font-family: 'Secular One', sans-serif;
+  ;
+}
+
+.line {
+  &::after {
+    --scale: 0;
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 110%;
+    height: .2vh;
+    background: $color-atom-green;
+    transform: scaleX(var(--scale));
+    transform-origin: var(--x) 50%;
+    transition: transform .3s cubic-bezier(.51, .92, .24, 1);
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:hover::after {
+    --scale: 1;
+  }
 }
 
 .main {
@@ -103,11 +134,6 @@
   line-height: 1.5;
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
 @media (max-width: 600px) {
   .grid {
     width: 100%;
@@ -116,13 +142,16 @@
 }
 
 @media (prefers-color-scheme: dark) {
+
   .card,
   .footer {
     border-color: #222;
   }
+
   .code {
     background: #111;
   }
+
   .logo img {
     filter: invert(1);
   }

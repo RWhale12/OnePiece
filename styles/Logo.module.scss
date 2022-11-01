@@ -1,0 +1,20 @@
+.logo {
+    width: 20%;
+
+    font-size: 4vh;
+    font-weight: 700;
+    color: white;
+    opacity: .8;
+    text-align: end;
+
+    display: flex;
+    align-items: center;
+
+    &_green{
+        color: $color-atom-green;
+    }
+
+    &:hover{
+        color: $color-atom-green;
+    }
+}

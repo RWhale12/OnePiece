@@ -1,0 +1,60 @@
+
+.manga_chapters {
+    display: flex;
+    justify-content: center;
+
+    &_block {
+
+        font-size: 2vh;
+        font-weight: 600;
+        color: $color-white;
+        opacity: .8;
+
+        width: 70%;
+
+        margin: 10vh 0;
+        background: rgba($color-one, $alpha: 0.8);
+        box-shadow: 0 0 1vh $color-white;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &_tom {
+            margin: 4vh;
+
+            &_title {
+                text-decoration: underline 0.3vh $color-atom-green;
+                text-underline-offset: .5vh;
+                margin-bottom: 2vh;
+            }
+
+            &_chapters {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                &_el {
+                    width: 18%;
+                    margin: 1vh;
+                    padding-top: 2vh;
+                    padding-bottom: 2vh;
+
+                    border: 0.5vh solid transparent;
+                    border-bottom: 0.5vh solid $color-atom-green;
+                    border-right: 0.5vh solid $color-atom-green;
+
+                    transition: all .3s;
+
+                    &:hover {
+                        padding-left: 3vh;
+                        border: 0.5vh solid $color-atom-green;
+                        transform: scale(1.05);
+                    }
+
+                    
+                }
+            }
+        }
+    }
+}

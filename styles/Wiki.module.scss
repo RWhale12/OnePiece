@@ -1,0 +1,54 @@
+.wiki {
+
+    font-size: 2vh;
+    font-weight: 600;
+    color: $color-white;
+    opacity: .8;
+
+    width: 70%;
+
+    margin: 10vh 0;
+    background: rgba($color-one, $alpha: 0.8);
+    box-shadow: 0 0 1vh $color-white;
+
+    display: grid;
+    grid-gap: 5vh;
+    padding: 5vh;
+    grid-template-columns: repeat(4, 1fr);
+
+    &_el {
+        height: 25vh;
+
+        border: 0.5vh solid transparent;
+        border-bottom: 0.5vh solid $color-atom-green;
+        border-right: 0.5vh solid $color-atom-green;
+
+        transition: all .3s;
+        padding: 1vh;
+
+        &:hover {
+
+            border: 0.5vh solid $color-atom-green;
+            transform: scale(1.05);
+        }
+
+        &_list {
+            font-size: 2vh;
+            font-weight: 600;
+            color: $color-white;
+            opacity: .8;
+
+            width: 70%;
+
+            margin: 10vh 0;
+            background: rgba($color-one, $alpha: 0.8);
+            box-shadow: 0 0 1vh $color-white;
+
+            display: grid;
+            grid-gap: 3vh;
+            padding: 5vh;
+            grid-template-columns: repeat(5, 1fr);
+        }
+    }
+
+}

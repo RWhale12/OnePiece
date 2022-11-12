@@ -7,8 +7,16 @@ import { MainImage } from './components/MainImage';
 import { useEffect } from 'react'
 import { ReadingCharachters } from './api/charachters'
 import { TeamCharachters } from './components/TeamCharachters'
+import { ReadingManga } from './api/manga'
+
+import { doc, getDoc } from "firebase/firestore";
+import { db } from '../firebase/clientApp';
+
+
 
 const Home: NextPage = () => {
+
+  
 
   return (
     <div className={styles.container}>
